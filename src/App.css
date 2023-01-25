@@ -1,0 +1,71 @@
+html,
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color-scheme: light dark;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #eae7dc;
+  display: flex;
+  place-items: center;
+}
+
+/* Some basic styling for elements*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #e98074;
+}
+
+h3 {
+  color: #e98074;
+}
+
+p {
+  font-size: 18px;
+  color: #575655;
+  margin-top: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Styling for class names*/
+.app {
+  margin: 5vh 3vw;
+}
+
+.app {
+}
+
+.retaurants-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant {
+  display: flex;
+  padding: 5px 10px;
+  flex-direction: column;
+}
+.restaurant:hover {
+  cursor: pointer;
+  background-color: #dcd7c7;
+}
+
+* {
+  box-sizing: border-box;
+}
