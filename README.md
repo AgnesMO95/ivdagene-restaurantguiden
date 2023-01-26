@@ -377,3 +377,7 @@ Lagre restauranten i en local variabel, og vis informasjonen du ønsker hvis kna
 ```
 
 </details>
+
+### Oppgave 8 - Styling
+
+Hvis du ønsker å leke deg litt med styling kan denne linken være nyttig: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
