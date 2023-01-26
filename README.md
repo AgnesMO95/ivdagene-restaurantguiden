@@ -162,7 +162,30 @@ Neste steg er å initiere prosjektet med git og pushe det til github. I terminal
 
 ## Gjøres indivduelt
 
-### Oppgave 3 - Sorter restaurantene på total karakteren
+### Oppgave 3 - Display smileies istedenfor karakter
+
+<details><summary>Hint</summary>
+
+Lag en hjelpe funksjon som omgjør tall til smiley
+
+</details>
+
+<details><summary>LF</summary>
+
+```Javascript
+   const getSmiley = (value) => {
+    return value == 3 ? "🤮" : value == 2 ? "🤢" : value == 1 ? "🙂" : "🤩";
+  };
+
+  {/* .... */}
+  <h3>{getSmiley(restaurant.total_karakter)}</h3>
+```
+
+</details>
+
+### Oppgave 4 - Sorter restaurantene på total karakteren
+
+Her kan man velge om man vil sortere slik at restaurantene med best rating kommer øverst eller omvendt.
 
 <details><summary>Hint</summary>
 
@@ -173,20 +196,17 @@ Bruk [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 <details><summary>LF</summary>
 
 ```Javascript
-    {restaurants
+    restaurants
         .sort((a, b) => a.total_karakter - b.total_karakter)
-        .map((restaurant, index) => (
-        <Restaurant key={index} restaurant={restaurant}></Restaurant>
-        ))}
 ```
 
 </details>
 
-### Oppgave 4 - Filtrer dataen
+### Oppgave 4b - Lag funksjonalitet for brukeren velge type sortering
 
-#### Vanskelihetsgrad 1:
+### Oppgave 5 - Filtrer dataen
 
-Filtrer ut restauranter med en type karakter
+Filtrer ut restauranter med en type karakter, feks alle restauranter med 0 anmerkninger.
 
 <details><summary>Hint</summary>
 
@@ -202,11 +222,11 @@ Bruk [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 
 </details>
 
-#### Vanskelihetsgrad 2:
+### Oppgave 5b - lag en filtreringsmeny
 
-Lag en filter meny som lar deg hente ut Restauranter med en eller flere karakterer. F.eks karakter 0, eller med karekter 0 og 1
+Lag en meny som lar deg filtrere ut restauranter basert på karakteren deres, man kan velge om man kun skal kunne filtrere ut en karakter eller om man vil kunne velge flere
 
-### Oppgave 5 - Hent ut 5 første restaurantene
+### Oppgave 6 - Hent ut 5 første restaurantene
 
 <details><summary>Hint</summary>
 
@@ -222,7 +242,7 @@ Bruk [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 
 </details>
 
-### Oppgave 6 - Finn en random restaurant
+### Oppgave 7 - Finn en random restaurant
 
 <details><summary>Hint 1</summary>
 
@@ -283,7 +303,7 @@ Lagre restauranten i en local variabel, og vis informasjonen du ønsker hvis kna
     );
   }
 
-    //i return
+  {/* .... */}
   <button
     className="random-button"
     onClick={() => getRandomRestaurant(restaurants)}
@@ -291,9 +311,7 @@ Lagre restauranten i en local variabel, og vis informasjonen du ønsker hvis kna
         random restaurant
     </button>
     {randomRestaurant && (
-        <>
-            <h1>{randomRestaurant.navn}</h1>
-        </>
+        <h1>{randomRestaurant.navn}</h1>
     )}
 ```
 
