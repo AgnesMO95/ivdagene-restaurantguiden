@@ -2,6 +2,9 @@
 
 ## Lenker og annet nyttig under workshoppen
 
+git: https://git-scm.com/downloads
+node: https://nodejs.org/en/download/
+
 ```json
    "homepage": "http://<ditt-github-navn>.github.io/restaurantguiden,"
 ```
