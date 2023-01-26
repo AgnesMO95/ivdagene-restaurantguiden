@@ -255,7 +255,7 @@ Lage select som består av options til å kunne velge sortering
   {/* .... */}
   <label>
     <p>Sort restaurants</p>
-      <select value={filters.sort} onChange={handleSort}>
+      <select value={sort} onChange={handleSort}>
         <option>Ingen</option>
         <option>Synkende</option>
         <option>Økende</option>
