@@ -204,6 +204,24 @@ Bruk [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 ### Oppgave 4b - Lag funksjonalitet for brukeren velge type sortering
 
+<details><summary>Hint 1</summary>
+
+Trekk ut sort i egene funksjoner
+
+</details>
+
+<details><summary>Hint 2</summary>
+
+Lage en handle sort funksjon
+
+</details>
+
+<details><summary>Hint 3</summary>
+
+Lage select som består av options til å kunne velge sortering
+
+</details>
+
 <details><summary>LF</summary>
 
 ```Javascript
