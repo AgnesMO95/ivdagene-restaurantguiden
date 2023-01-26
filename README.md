@@ -204,6 +204,49 @@ Bruk [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 ### Oppgave 4b - Lag funksjonalitet for brukeren velge type sortering
 
+<details><summary>LF</summary>
+
+```Javascript
+  const [currentRestaurants, setCurrentRestaurants] = useState(restuarants);
+  const [sort, setSort] = useState("Ingen");
+
+  const handleSortDescending = () => {
+    setSort("Synkende");
+    const data = restaurants.sort((a, b) => a.total_karakter - b.total_karakter);
+    setCurrentRestaurants(data);
+  };
+  const handleSortAscending = () => {
+    setSort("Økende" );
+    const data = restaurants.sort((a, b) => b.total_karakter - a.total_karakter);
+    setCurrentRestaurants(data);
+  };
+
+  const handleSort = (event) => {
+    if (event.target.value === "Økende") {
+      handleSortAscending();
+    }
+    if (event.target.value === "Synkende") {
+      handleSortDescending();
+    }
+    if (event.target.value === "Ingen") {
+      setFilters("Ingen");
+      setCurrentRestaurants(restaurants);
+    }
+  };
+
+  {/* .... */}
+  <label>
+    <p>Sort restaurants</p>
+      <select value={filters.sort} onChange={handleSort}>
+        <option>Ingen</option>
+        <option>Synkende</option>
+        <option>Økende</option>
+      </select>
+  </label>
+```
+
+</details>
+
 ### Oppgave 5 - Filtrer dataen
 
 Filtrer ut restauranter med en type karakter, feks alle restauranter med 0 anmerkninger.
